@@ -28,8 +28,12 @@ class ImageClassification:
         self.computervision_client = ComputerVisionClient(self.endpoint, CognitiveServicesCredentials(self.subscription_key))
 
     def get_classification_result(self,image_url):
-        description_results = self.computervision_client.describe_image(image_url )
+        return self.computervision_client.describe_image(image_url )
     
     def get_classified_name_of_image(self,image_url):
         result = self.get_classification_result(image_url)
+        print (result)
 
+if __name__=="__main__":
+    a = ImageClassification()
+    a.get_classified_name_of_image("https://raw.githubusercontent.com/Azure-Samples/cognitive-services-sample-data-files/master/ComputerVision/Images/landmark.jpg")
