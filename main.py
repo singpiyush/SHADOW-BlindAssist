@@ -17,6 +17,3 @@ def predict():
         result  = classification.get_classified_name_of_image(image_data)
         return json.dumps(result)
     return "Image not found"
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True)
