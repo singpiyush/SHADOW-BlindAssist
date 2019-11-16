@@ -7,6 +7,10 @@ app = Flask(__name__)
 
 classification  = ImageClassification()
 
+@app.route('/')
+def hello():
+    return "Hello"
+
 @app.route('/predict' , methods=["POST"])
 def predict():
     print (request.files)
