@@ -3,3 +3,6 @@ pillow
 requests
 matplotlib
 flask
+azure-storage-blob
+opencv-python
+azure-cognitiveservices-speech

@@ -23,7 +23,7 @@ class ImageClassification:
     def get_classification_result(self,image):
         return self.computervision_client.detect_objects_in_stream(image )
     
-    def get_classified_name_of_image(self,image):
+    def get_classified_name_of_image(self,image, intent):
         name = []
         result = self.get_classification_result(image)
         if result != None:
